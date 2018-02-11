@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Module-1_JS</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // Первый, второй, третий ряды символов
+      const firstLine = 'qwertyuiop[]';
+      const secondLine = 'asdfghjkl;\'\\';
+      const thirdLine = '\\zxcvbnm,./';
+      // Длина рядов
+      const widthFirst = firstLine.length;
+      const widthSecond = secondLine.length;
+      const widthThird = thirdLine.length;
+
+      // Первый и последний символ в верхней строке символов
+      const topFirst = firstLine.charAt(0);
+      const topLast = firstLine.charAt(widthFirst -1);
+      // Первый и последний символ в средней строке символов
+      const middleFirst = secondLine.charAt(0);
+      const middleLast = secondLine.charAt(widthFirst -1);
+      // Первый и последний символ в нмжней строке символов
+      const bottomFirst = thirdLine.charAt(0);
+      const bottomLast = thirdLine.charAt(widthFirst -1);
+      // Поиск позиции по [ и ]
+      const topBrakeLeft = firstLine.indexOf('[');
+      const topBrakeRight = firstLine.indexOf(']');
+      const middleBrakeLeft = secondLine.indexOf('[');
+      const middleBrakeRight = secondLine.indexOf(']');
+      const bottomBrakeLeft = thirdLine.indexOf('[');
+      const bottomBrakeRight = thirdLine.indexOf(']');
+      // Вывод результата в один console.log();
+      console.log(`Первая строка ${firstLine} Вторая ${secondLine} Третья ${thirdLine}
+        Длина строки первой ${widthFirst}, второй ${widthSecond}, третей ${widthThird},
+        первый "${topFirst}" и последний "${topLast}" символ в первом ряду.
+        Первый "${middleFirst}" и последний "${middleLast}" символ в втором ряду.
+        Первый "${bottomFirst}" и последний "${bottomLast}" символ в нижнем ряду.
+        поиск позиции для символов [ и ] в верхнем ряду позиция ${topBrakeLeft} и ${topBrakeRight},
+        в среднем ряду ${middleBrakeLeft} и ${middleBrakeRight} , и в нижнем ряду ${bottomBrakeLeft} и ${bottomBrakeRight}
+         `);
+    </script>
+  </body>
+</html>
